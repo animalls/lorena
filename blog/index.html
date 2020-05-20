@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+        <title>Biobooster</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box
+            }
+
+            html {
+                font-family: sans-serif;
+                line-height: 1.15
+            }
+
+            article,
+            aside,
+            dialog,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            main,
+            nav,
+            section {
+                display: block
+            }
+
+            body {
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: rgb(33, 37, 41);
+                text-align: left;
+                background-color: rgb(255, 255, 255)
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-top: 0;
+                margin-bottom: .5rem
+            }
+
+            p {
+                margin-top: 0;
+                margin-bottom: 1rem
+            }
+
+            blockquote {
+                margin: 0 0 1rem
+            }
+
+            b,
+            strong {
+                font-weight: bolder
+            }
+
+            a {
+                color: rgb(0, 123, 255);
+                text-decoration: none;
+                background-color: transparent
+            }
+
+            a:hover {
+                color: rgb(0, 86, 179);
+                text-decoration: underline
+            }
+
+            img {
+                vertical-align: middle;
+                border-style: none
+            }
+
+            a,
+            area,
+            button,
+            [role="button"],
+            input:not([type="range"]),
+            label,
+            select,
+            summary,
+            textarea {
+                touch-action: manipulation
+            }
+
+        </style>
+        <style>
+            html {
+                box-sizing: border-box
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: inherit
+            }
+
+            .container {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto
+            }
+
+            @media (min-width:576px) {
+                .container {
+                    max-width: 540px
+                }
+            }
+
+            @media (min-width:768px) {
+                .container {
+                    max-width: 720px
+                }
+            }
+
+            @media (min-width:992px) {
+                .container {
+                    max-width: 960px
+                }
+            }
+
+            @media (min-width:1200px) {
+                .container {
+                    max-width: 1140px
+                }
+            }
+
+            .container-fluid {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px
+            }
+
+            .col-1,
+            .col-2,
+            .col-3,
+            .col-4,
+            .col-5,
+            .col-6,
+            .col-7,
+            .col-8,
+            .col-9,
+            .col-10,
+            .col-11,
+            .col-12,
+            .col,
+            .col-auto,
+            .col-sm-1,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12,
+            .col-sm,
+            .col-sm-auto,
+            .col-md-1,
+            .col-md-2,
+            .col-md-3,
+            .col-md-4,
+            .col-md-5,
+            .col-md-6,
+            .col-md-7,
+            .col-md-8,
+            .col-md-9,
+            .col-md-10,
+            .col-md-11,
+            .col-md-12,
+            .col-md,
+            .col-md-auto,
+            .col-lg-1,
+            .col-lg-2,
+            .col-lg-3,
+            .col-lg-4,
+            .col-lg-5,
+            .col-lg-6,
+            .col-lg-7,
+            .col-lg-8,
+            .col-lg-9,
+            .col-lg-10,
+            .col-lg-11,
+            .col-lg-12,
+            .col-lg,
+            .col-lg-auto,
+            .col-xl-1,
+            .col-xl-2,
+            .col-xl-3,
+            .col-xl-4,
+            .col-xl-5,
+            .col-xl-6,
+            .col-xl-7,
+            .col-xl-8,
+            .col-xl-9,
+            .col-xl-10,
+            .col-xl-11,
+            .col-xl-12,
+            .col-xl,
+            .col-xl-auto {
+                position: relative;
+                width: 100%;
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px
+            }
+
+            .col-5 {
+                flex: 0 0 41.6667%;
+                max-width: 41.6667%
+            }
+
+            .col-6 {
+                flex: 0 0 50%;
+                max-width: 50%
+            }
+
+            .col-7 {
+                flex: 0 0 58.3333%;
+                max-width: 58.3333%
+            }
+
+            .col-12 {
+                flex: 0 0 100%;
+                max-width: 100%
+            }
+
+            @media (min-width:576px) {
+                .col-sm-4 {
+                    flex: 0 0 33.3333%;
+                    max-width: 33.3333%
+                }
+
+                .col-sm-6 {
+                    flex: 0 0 50%;
+                    max-width: 50%
+                }
+
+                .col-sm-12 {
+                    flex: 0 0 100%;
+                    max-width: 100%
+                }
+
+                .offset-sm-0 {
+                    margin-left: 0
+                }
+            }
+
+            @media (min-width:768px) {
+                .col-md-3 {
+                    flex: 0 0 25%;
+                    max-width: 25%
+                }
+
+                .col-md-4 {
+                    flex: 0 0 33.3333%;
+                    max-width: 33.3333%
+                }
+
+                .col-md-5 {
+                    flex: 0 0 41.6667%;
+                    max-width: 41.6667%
+                }
+
+                .col-md-6 {
+                    flex: 0 0 50%;
+                    max-width: 50%
+                }
+
+                .col-md-8 {
+                    flex: 0 0 66.6667%;
+                    max-width: 66.6667%
+                }
+
+                .col-md-9 {
+                    flex: 0 0 75%;
+                    max-width: 75%
+                }
+
+                .col-md-12 {
+                    flex: 0 0 100%;
+                    max-width: 100%
+                }
+
+                .offset-md-2 {
+                    margin-left: 16.6667%
+                }
+            }
+
+        </style>
+        <style>
+            :root {
+                --blue: #007bff;
+                --indigo: #6610f2;
+                --purple: #6f42c1;
+                --pink: #e83e8c;
+                --red: #dc3545;
+                --orange: #fd7e14;
+                --yellow: #ffc107;
+                --green: #28a745;
+                --teal: #20c997;
+                --cyan: #17a2b8;
+                --white: #fff;
+                --gray: #868e96;
+                --gray-dark: #343a40;
+                --primary: #007bff;
+                --secondary: #868e96;
+                --success: #28a745;
+                --info: #17a2b8;
+                --warning: #ffc107;
+                --danger: #dc3545;
+                --light: #f8f9fa;
+                --dark: #343a40;
+                --breakpoint-xs: 0;
+                --breakpoint-sm: 576px;
+                --breakpoint-md: 720px;
+                --breakpoint-lg: 992px;
+                --breakpoint-xl: 1200px;
+                --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+            }
+
+            @media print {
+
+                *,
+                *::before,
+                *::after {
+                    text-shadow: none !important;
+                    box-shadow: none !important
+                }
+
+                a,
+                a:visited {
+                    text-decoration: underline
+                }
+
+                pre,
+                blockquote {
+                    border: 1px solid rgb(153, 153, 153);
+                    page-break-inside: avoid
+                }
+
+                tr,
+                img {
+                    page-break-inside: avoid
+                }
+
+                h2,
+                h3 {
+                    page-break-after: avoid
+                }
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box
+            }
+
+            html {
+                font-family: sans-serif;
+                line-height: 1.15
+            }
+
+            article,
+            aside,
+            dialog,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            main,
+            nav,
+            section {
+                display: block
+            }
+
+            body {
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: rgb(33, 37, 41);
+                text-align: left;
+                background-color: rgb(255, 255, 255)
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-top: 0;
+                margin-bottom: .5rem
+            }
+
+            p {
+                margin-top: 0;
+                margin-bottom: 1rem
+            }
+
+            blockquote {
+                margin: 0 0 1rem
+            }
+
+            b,
+            strong {
+                font-weight: bolder
+            }
+
+            a {
+                color: rgb(0, 123, 255);
+                text-decoration: none;
+                background-color: transparent
+            }
+
+            a:hover {
+                color: rgb(0, 86, 179);
+                text-decoration: underline
+            }
+
+            img {
+                vertical-align: middle;
+                border-style: none
+            }
+
+            a,
+            area,
+            button,
+            [role="button"],
+            input:not([type="range"]),
+            label,
+            select,
+            summary,
+            textarea {
+                touch-action: manipulation
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            .h1,
+            .h2,
+            .h3,
+            .h4,
+            .h5,
+            .h6 {
+                margin-bottom: .5rem;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.2;
+                color: inherit
+            }
+
+            h1,
+            .h1 {
+                font-size: 2.5rem
+            }
+
+            h2,
+            .h2 {
+                font-size: 2rem
+            }
+
+            .container {
+                width: 100%;
+                padding-right: 10px;
+                padding-left: 10px;
+                margin-right: auto;
+                margin-left: auto
+            }
+
+            @media (min-width:576px) {
+                .container {
+                    max-width: 540px
+                }
+            }
+
+            @media (min-width:720px) {
+                .container {
+                    max-width: 610px
+                }
+            }
+
+            @media (min-width:992px) {
+                .container {
+                    max-width: 960px
+                }
+            }
+
+            .container-fluid {
+                width: 100%;
+                padding-right: 10px;
+                padding-left: 10px;
+                margin-right: auto;
+                margin-left: auto
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -10px;
+                margin-left: -10px
+            }
+
+            .col-1,
+            .col-2,
+            .col-3,
+            .col-4,
+            .col-5,
+            .col-6,
+            .col-7,
+            .col-8,
+            .col-9,
+            .col-10,
+            .col-11,
+            .col-12,
+            .col,
+            .col-auto,
+            .col-sm-1,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12,
+            .col-sm,
+            .col-sm-auto,
+            .col-md-1,
+            .col-md-2,
+            .col-md-3,
+            .col-md-4,
+            .col-md-5,
+            .col-md-6,
+            .col-md-7,
+            .col-md-8,
+            .col-md-9,
+            .col-md-10,
+            .col-md-11,
+            .col-md-12,
+            .col-md,
+            .col-md-auto,
+            .col-lg-1,
+            .col-lg-2,
+            .col-lg-3,
+            .col-lg-4,
+            .col-lg-5,
+            .col-lg-6,
+            .col-lg-7,
+            .col-lg-8,
+            .col-lg-9,
+            .col-lg-10,
+            .col-lg-11,
+            .col-lg-12,
+            .col-lg,
+            .col-lg-auto,
+            .col-xl-1,
+            .col-xl-2,
+            .col-xl-3,
+            .col-xl-4,
+            .col-xl-5,
+            .col-xl-6,
+            .col-xl-7,
+            .col-xl-8,
+            .col-xl-9,
+            .col-xl-10,
+            .col-xl-11,
+            .col-xl-12,
+            .col-xl,
+            .col-xl-auto {
+                position: relative;
+                width: 100%;
+                min-height: 1px;
+                padding-right: 10px;
+                padding-left: 10px
+            }
+
+            .col-5 {
+                flex: 0 0 41.6667%;
+                max-width: 41.6667%
+            }
+
+            .col-6 {
+                flex: 0 0 50%;
+                max-width: 50%
+            }
+
+            .col-7 {
+                flex: 0 0 58.3333%;
+                max-width: 58.3333%
+            }
+
+            .col-12 {
+                flex: 0 0 100%;
+                max-width: 100%
+            }
+
+            @media (min-width:576px) {
+                .col-sm-4 {
+                    flex: 0 0 33.3333%;
+                    max-width: 33.3333%
+                }
+
+                .col-sm-6 {
+                    flex: 0 0 50%;
+                    max-width: 50%
+                }
+
+                .col-sm-12 {
+                    flex: 0 0 100%;
+                    max-width: 100%
+                }
+
+                .offset-sm-0 {
+                    margin-left: 0
+                }
+            }
+
+            @media (min-width:992px) {
+                .col-md-3 {
+                    flex: 0 0 25%;
+                    max-width: 25%
+                }
+
+                .col-md-4 {
+                    flex: 0 0 33.3333%;
+                    max-width: 33.3333%
+                }
+
+                .col-md-5 {
+                    flex: 0 0 41.6667%;
+                    max-width: 41.6667%
+                }
+
+                .col-md-6 {
+                    flex: 0 0 50%;
+                    max-width: 50%
+                }
+
+                .col-md-8 {
+                    flex: 0 0 66.6667%;
+                    max-width: 66.6667%
+                }
+
+                .col-md-9 {
+                    flex: 0 0 75%;
+                    max-width: 75%
+                }
+
+                .col-md-12 {
+                    flex: 0 0 100%;
+                    max-width: 100%
+                }
+
+                .offset-md-2 {
+                    margin-left: 16.6667%
+                }
+            }
+
+            .text-right {
+                text-align: right !important
+            }
+
+            .text-center {
+                text-align: center !important
+            }
+
+            .img-responsive {
+                max-width: 100%;
+                display: block;
+                margin: 3px auto 15px
+            }
+
+        </style>
+        <style>
+            @font-face {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 400;
+                src: url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoRegular.eot") format("embedded-opentype"), url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoRegular.woff") format("woff"), url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoRegular.ttf") format("truetype")
+            }
+
+            @font-face {
+                font-family: "RobotoBold";
+                font-style: normal;
+                font-weight: 400;
+                src: url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoBold.eot") format("embedded-opentype"), url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoBold.woff") format("woff"), url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoBold.ttf") format("truetype")
+            }
+
+            @font-face {
+                font-family: "RobotoBoldItalic";
+                font-style: normal;
+                font-weight: 400;
+                src: url("") format("embedded-opentype"), url("") format("woff"), url("") format("truetype")
+            }
+
+            @font-face {
+                font-family: "RobotoItalic";
+                font-style: normal;
+                font-weight: 400;
+                src: url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoItalic.eot") format("embedded-opentype"), url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoItalic.woff") format("woff"), url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoItalic.ttf") format("truetype"), url("urn:scrapbook:download:error:http://uabpt.doctordays.com/fonts/RobotoItalic.svg") format("svg")
+            }
+
+            body {
+                padding: 0;
+                font-family: "Roboto", arial;
+                font-size: 16px;
+                line-height: 22px;
+                overflow-x: hidden;
+                width: 100%;
+                box-sizing: border-box
+            }
+
+            body a {
+                font-family: "RobotoBold";
+                transition: all 0.5s ease 0s;
+                font-weight: 400;
+                text-decoration: underline;
+                color: rgb(21, 139, 230)
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-align: center;
+                color: rgb(102, 102, 102);
+                font-weight: 400;
+                line-height: normal;
+                margin: 0 0 15px
+            }
+
+            b,
+            strong {
+                font-family: "RobotoBold", arial;
+                font-weight: 400
+            }
+
+            nav,
+            footer {
+                padding: 20px 0;
+                margin: 0
+            }
+
+            main {
+                padding: 7px 0 20px;
+                margin: 0
+            }
+
+            header {
+                background-color: rgb(0, 0, 0);
+                height: 59px;
+                padding: 10px 0;
+                margin: 0;
+                border-top: 5px solid rgb(255, 255, 255);
+                border-bottom: 5px solid rgb(255, 255, 255)
+            }
+
+            nav {
+                background-color: rgb(41, 41, 41);
+                height: 46px;
+                line-height: 46px;
+                padding: 0;
+                font-size: 28px
+            }
+
+            nav a {
+                text-decoration: none;
+                color: rgb(99, 99, 99)
+            }
+
+            nav a:hover {
+                color: rgb(255, 255, 255)
+            }
+
+            span.red {
+                font-size: 15px;
+                font-family: "RobotoBold";
+                color: rgb(255, 1, 1);
+                line-height: 26px;
+                text-align: left
+            }
+
+            span.gray {
+                display: block;
+                font-size: 14px;
+                font-family: "Roboto";
+                color: rgb(141, 141, 141);
+                line-height: 26px;
+                text-align: left
+            }
+
+            h1 {
+                font-size: 24px;
+                font-family: "RobotoBold";
+                color: rgb(1, 1, 1);
+                line-height: 1.2;
+                text-align: left;
+                margin-top: 15px
+            }
+
+            h2 {
+                font-size: 18px;
+                font-family: "RobotoItalic";
+                color: rgb(70, 70, 70);
+                line-height: 1.2;
+                text-align: left;
+                margin-bottom: 15px
+            }
+
+            blockquote {
+                font-size: 22px;
+                font-family: "RobotoItalic";
+                color: rgb(248, 34, 34);
+                line-height: 1.2;
+                text-align: center
+            }
+
+            .doc-quote {
+                font-family: "RobotoItalic"
+            }
+
+            .row.commentarios {
+                background: rgb(232, 232, 232) none repeat scroll 0% 0%;
+                margin-left: -40px;
+                margin-bottom: 20px;
+                margin-top: 20px
+            }
+
+            .row.commentarios .col-md-12,
+            .otros-commentarios .col-md-12 {
+                padding: 3px 0 5px 40px;
+                font-family: "RobotoBold", arial
+            }
+
+            .otros-commentarios {
+                background: rgb(232, 232, 232) none repeat scroll 0% 0%;
+                border-radius: 5px;
+                margin-bottom: 40px;
+                margin-top: 25px
+            }
+
+            .otros-commentarios a {
+                font-family: "RobotoBold";
+                font-size: 15px;
+                text-decoration: none;
+                color: rgb(72, 71, 71)
+            }
+
+            .otros-commentarios .col-md-12 {
+                font-size: 17px
+            }
+
+            .img-circle {
+                border-radius: 50%
+            }
+
+            .related a {
+                display: block;
+                font-size: 21px;
+                font-family: "RobotoBold";
+                color: rgb(1, 1, 1);
+                line-height: 1.2;
+                text-align: left;
+                text-decoration: none;
+                padding-bottom: 15px
+            }
+
+            .related a:hover {
+                text-decoration: underline
+            }
+
+            .comm-table {
+                display: table;
+                margin-top: 0
+            }
+
+            .col-avatar {
+                display: table-cell;
+                margin-left: 10px;
+                max-width: 40px;
+                vertical-align: top;
+                padding-top: 0;
+                margin-top: 0
+            }
+
+            .col-comm-text {
+                padding-left: 15px;
+                display: table-cell;
+                vertical-align: top;
+                padding-top: 0;
+                margin-top: 0;
+                margin-bottom: 20px
+            }
+
+            .nickname {
+                font-family: "RobotoBold";
+                font-size: 17px;
+                line-height: 17px;
+                margin-bottom: 9px
+            }
+
+            .comment {
+                font-family: "Roboto";
+                font-size: 15px;
+                line-height: 17px;
+                color: rgb(1, 1, 1);
+                margin-bottom: 5px
+            }
+
+            a.bluesky {
+                font-family: "RobotoItalic";
+                color: rgb(95, 146, 230);
+                text-decoration: underline;
+                cursor: pointer
+            }
+
+            a.bluesky:hover {
+                color: rgb(21, 85, 175);
+                cursor: pointer
+            }
+
+            .date {
+                font-family: "RobotoItalic";
+                font-size: 15px;
+                color: rgb(1, 1, 1)
+            }
+
+            .orderlink {
+                font-size: 25px;
+                font-family: "RobotoBold";
+                color: rgb(95, 146, 230);
+                text-decoration: underline;
+                line-height: 1.2;
+                text-align: center
+            }
+
+            footer {
+                background: rgb(2, 2, 2) none repeat scroll 0% 0%;
+                color: rgb(154, 154, 154);
+                padding: 30px 0 20px
+            }
+
+            footer img.img-responsive {
+                margin: 3px 0 20px
+            }
+
+            footer p {
+                color: rgb(154, 154, 154);
+                font-size: 12px;
+                line-height: 17px
+            }
+
+            footer a {
+                font-family: "Roboto";
+                color: rgb(154, 154, 154);
+                text-decoration: underline;
+                font-weight: 400
+            }
+
+            footer .socialicons a {
+                color: rgb(255, 255, 255);
+                font-size: 23px;
+                padding-right: 5px
+            }
+
+            footer a:hover {
+                color: rgb(234, 0, 0)
+            }
+
+            @media (min-width:992px) {
+                blockquote {
+                    font-size: 26px
+                }
+
+                header {
+                    height: 79px;
+                    padding: 20px
+                }
+
+                span.gray {
+                    float: right
+                }
+
+                h1 {
+                    font-size: 34px
+                }
+
+                h2 {
+                    font-size: 24px
+                }
+
+                body {
+                    font-size: 20px;
+                    line-height: 26px
+                }
+
+                main {
+                    padding: 17px 0 60px
+                }
+
+                span.red {
+                    font-size: 20px
+                }
+
+                .related a {
+                    padding-top: 0;
+                    padding-bottom: 0
+                }
+            }
+
+            @media (max-width:991px) {
+                .row.related img {
+                    width: 100%
+                }
+            }
+
+            @media (max-width:576px) {
+                .hidden-xs {
+                    display: none
+                }
+
+                .related a {
+                    font-size: 16px
+                }
+            }
+
+        </style>
+        <link rel="stylesheet" href="urn:scrapbook:download:error:http://uabpt.doctordays.com/css/font-awesome.min.css">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="referrer" content="never">
+        <meta name="googlebot" content="noindex">
+        <style>
+            iframe {
+                visibility: hidden;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 0;
+                width: 0;
+                border: none;
+            }
+
+        </style>
+  <!--drcash-->
+
+
+
+
+<!--drcash-->
+
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="translateelement.css">
+</head>
+<span id="warning-container"><i data-reactroot=""></i></span>
+
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="logo_img text-center"><img src="logo.png" alt=""></div>
+            </div>
+        </header>
+
+
+        <nav>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="offset-md-2 col-md-8 offset-sm-0 col-sm-12">
+                            <a target="_blank" href="buy"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+
+
+                <!-- 2 columns-->
+                <div class="row">
+                    <!--main article-->
+                    <div class="offset-md-2 col-md-8 offset-sm-0 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-6"><img src="Jpg_1.jpg" alt="" class="img-responsive"></div>
+                            <div class="col-md-4 col-sm-4 col-6"><img src="Jpg_2.jpg" alt="" class="img-responsive"></div>
+                            <div class="col-md-4 col-sm-4 hidden-xs"><img src="Jpg_3.jpg" alt="" class="img-responsive"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9 col-sm-6 col-6"><span class="red"><i class="fa fa-play" aria-hidden="true"></i> Ariana BELLOMO</span></div>
+                            <div class="col-md-3 col-sm-6 col-6"><span class="gray"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;29125&nbsp;&nbsp;&nbsp;<i class="fa fa-heart" aria-hidden="true"></i>&nbsp;34539</span></div>
+                        </div>
+
+                        <h1>1 programa de curación = <span style="color: rgb(248,34,34)">7 horas de sexo</span></h1>
+                        <div style="text-align: left; color: #000; font-weight: 600; font-size: 24px; margin-bottom: 20px;">¡Mi marido me folla durante 7 horas y su polla no se rinde!</div>
+                        <h2>¿Por qué le di estas cápsulas? ¡Sálvame a mí y a mis agujeros de este monstruo!</h2>
+                        <img src="img02.jpg" alt="" class="img-responsive">
+                        <blockquote>Cuanto más dura sea la cola, mejor será el sexo.</blockquote>
+                        <p>Hola a todos! ¿Recordáis una de las publicaciones en las que me quejé de mi esposo Antonio, que absolutamente no me satisfizo? ¡No tenía una erección normal incluso con un buen sexo oral!</p>
+                        <p>Ya lo hemos probado todo: Viagra, otros productos estimulantes, yoga, prácticas tántricas. Todo esto no produjo un resultado. Su polla permaneció flácida y el sexo no duró más de 2 minutos (:</p>
+                        <p>Pensé que esto se debía a genes o condición física y que no hay nada que puedas hacer al respecto que la única decisión es aceptar la situación.</p>
+                        <p>Por supuesto, quería tener relaciones sexuales más largas como solía hacerlo, ya que todavía soy una mujer joven y hermosa y no quiero renunciar al sexo. Del mismo modo, no quería engañar a Antonio.</p>
+                        <blockquote>La solución llegó cuando ya perdí la esperanza ...</blockquote>
+                        <p>Perdí la esperanza hace mucho tiempo cuando veía un programa de televisión con Hugh Hefner (el fundador de la revista Playboy). Dijo que cada hombre puede tener relaciones sexuales durante dos horas. Incluso a su edad. Pero con una condición: ¡es necesario que la testosterona (la hormona masculina más importante) esté en un nivel alto!</p>
+                        <p>Según Hugh, la testosterona le da mucha energía al cuerpo para hacer el amor durante horas. La testosterona aumenta el apetito sexual y hace que los hombres sean aún más atrevidos. Esta hormona permite a los hombres satisfacer a sus mujeres durante muchas horas con relaciones sexuales inolvidables ...</p>
+
+                        <p>Hugh recomendó <a target="_blank" href="buy">Biobooster</a>, que mejora y estimula la potencia masculina con Maca Peruana. Lo usó personalmente. Inmediatamente fui al sitio web y pedí 3 paquetes.</p>
+                        <img src="img03.jpg" alt="" class="img-responsive">
+                        <p><span class="doc-quote">El producto mejora la funcionalidad de los órganos sexuales y aumenta el nivel de testosterona, la principal hormona hereditaria. El uso regular aumenta la adicción sexual, fortalece la erección, prolonga el orgasmo y te hace más fuerte.</span></p>
+                        <blockquote>Cual es el resultado?</blockquote>
+                        <p>El paquete fue entregado en cuatro días. No estaba convencido de que funcionara y no quería provocar a mi esposo. Durante exactamente tres semanas había tomado estas cápsulas. Y un día, cuando me fui a la cama ...</p>
+                        <p>Es vergonzoso decir lo que sucedió después :) ¡Es una verdadera vergüenza! :) Pero como no estamos familiarizados, cuento todo en detalle.</p>
+                        <p>¡Esperaba que mejorara, pero así ...! Como Antonio me amaba después de estas cápsulas, ni siquiera podía imaginarlo en mis fantasías calientes.</p>
+                        <img src="img04.jpg" alt="" class="img-responsive">
+                        <p>De repente, saltó de la cama con una erección impresionante, ¡como una piedra! Se tocó la polla con una pasión animal! Me puso boca abajo y entró por detrás. Fue genial!</p>
+                        <p>¡No te lo puedes creer, me amó más de 1 hora y 40 minutos! Y eso es después de casi 3 años de su impotencia sexual. Profundamente! Sin parar! Nunca había experimentado algo así. :)</p>
+                        <p>¡Increíble placer, con sudor y gemidos!</p>
+                        <p>¡Fue la mejor noche de toda nuestra vida de casados! Como si tuviera relaciones sexuales con tres hombres)</p>
+                        <p>No puedo creer que este producto haya convertido a mi Antonio en un verdadero Alpha Man, y todo por el bajo precio.</p>
+                        <p>¡Creo que vale la pena, la vida es corta y no soy una chica que pueda negarse a gastar 130 euros para un verdadero placer! (Me despido, Antonio me llama a la cama, buenas noches !!!)))</p>
+                        <img src="img05.jpg" alt="" class="img-responsive">
+                        <p>Antonio toma cápsulas dos veces al día y estamos felices como nunca antes. Hay días en que nos amamos por más de 3 horas, como los animales. Y Antonio se volvió más musculoso, hay dados en el torso (¡todo gracias a la testosterona!). Pensé que era un producto de salud sexual, ¡pero me sorprendió que su cuerpo se volviera más atlético!</p>
+                        <img src="img06.jpg" alt="" class="img-responsive">
+                        <p>Absolutamente debes ver su torso musculoso. A medida que su programa de curación llega a su fin pronto, nos contactamos con el sitio web oficial de <a target="_blank" href="buy">Biobooster</a> para averiguar si Antonio debería continuar usando este producto. El consultor respondió que el efecto del producto se mantiene durante mucho tiempo y, en un futuro cercano, no es necesario volver a tomarlo.</p>
+                        <p>Bueno, tal vez ... si queremos obtener más emociones adicionales :)</p>
+                        <img src="img07.jpg" alt="" class="img-responsive">
+                        <p>Recomendaría este producto a aquellos que desean mejorar su vida sexual sin Viagra y otros estimulantes peligrosos.</p>
+                        <p>¡No lo dudes, visita el sitio web oficial!</p>
+                        <p>Los consejeros son educados y competentes en materia de salud masculina. La consulta es anónima y se realizará por teléfono. No se preocupe por la entrega, el producto pedido se entregará en un paquete sin inscripciones y nadie puede adivinar qué hay allí.</p>
+
+                        <img src="biobooster_w-new-box-min.png" alt="" class="img-responsive" style="margin: 0 auto; max-width: 400px;">
+                        <p class="text-center"><a target="_blank" href="buy" class="orderlink">Visita el sitio web oficial de Biobooster</a></p>
+                        <!--comments -->
+                        <div class="row commentarios">
+                            <div class="col-md-12">Comentarios</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-01.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Erica</p>
+                                        <p class="comment">Viví con mi novio durante 5 años y, francamente, no me quería hacer amor debido a su débil erección. Al final nos separamos y luego conocí a un hombre fantástico en la cama. Podía amarme durante horas, tenía una erección poderosa y apenas salíamos de la cama. En realidad, descubrí su secreto, eran las cápsulas las que fortalecían la potencia. Simplemente genial!</p>
+                                        <p class="date">Publicado hace 1 hora | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-02.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Enzo</p>
+                                        <p class="comment">Gracias! No esperaba tales resultados;) He estado usando las cápsulas
+                                            <a target="_blank" href="buy">Biobooster</a> durante casi un mes, los resultados han superado todas mis expectativas. La duración del acto se ha vuelto significativamente más larga, la erección también es muy fuerte, incluso después de la eyaculación. ¡Las chicas no me dejan ir ahora! Estoy tan cansado)))</p>
+                                        <p class="date">Publicado hace 1 hora | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-03.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Ralfi</p>
+                                        <p class="comment">Gracias, Ariana! Hace cuatro semanas recibí el paquete
+                                        <a target="_blank" href="buy">Biobooster</a> y comencé a usarlo. El sexo dura al menos una hora y mi polla siempre está lista para la pelea). Eso es más de lo que esperaba, ¡se siente genial! Solía ​​tomar Viagra, era tan idiota, solo perdonaba mi salud. Ahora es una cosa completamente diferente!!!</p>
+                                        <p class="date">Publicado hace 1 hora | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-06.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Eva Klein</p>
+                                        <p class="comment">Mi hermano vive en Estados Unidos y me dijo acerca de estas cápsulas que muchos hombres estadounidenses las toman ... pero aún no lo he probado :-)</p>
+                                        <p class="date">Publicado hace 2 horas | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-08.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Helena Gomez</p>
+                                        <p class="comment">Hola Ariana, ¡qué historia tan interesante! ;-)) Me gustaría ordenar este producto para mi esposo siempre que haya descuentos.</p>
+                                        <p class="date">Publicado hace 3 horas | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-07.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Konstantin </p>
+                                        <p class="comment">Tomo <a target="_blank" href="buy">Biobooster</a> durante 3 semanas y puedo decir que no esperaba tal efecto porque los médicos me diagnosticaron disfunción eréctil. ¡Ahora todo es fantástico! Chicas, ¿quién me quiere, oye? ))</p>
+                                        <p class="date">Enviado ayer | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-09.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Dirk</p>
+                                        <p class="comment">Hola, Ariana! He pedido 3 paquetes, estoy deseando que llegue el pedido. Tengo muchas ganas de probarlo! Tengo miedo al ridículo en la cama, estoy harto de vivir así</p>
+                                        <p class="date">Enviado ayer | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-13.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Karl</p>
+                                        <p class="comment">Esa es una historia! ¡Quiero estar en lugar de tu esposo, aah!</p>
+                                        <p class="date">Enviado ayer | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-11.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Eliana</p>
+                                        <p class="comment">¡Tengo un amigo que ha tomado estas cápsulas y dice que es la bomba!</p>
+                                        <p class="date">Publicado hace 2 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-12.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Sandra</p>
+                                        <p class="comment"> Hola, gracias por la historia, compré <a target="_blank" href="buy">Biobooster</a> para mi esposo. Es una bomba! ... su pene ha aumentado, la erección lleva mucho más tiempo que antes.</p>
+                                        <p class="date">Publicado hace 2 días  | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-14.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Franz</p>
+                                        <p class="comment"> Tomo estas cápsulas durante aproximadamente 2 semanas y no quiero dejar de hacerlo. ja ja ja!</p>
+                                        <p class="date">Publicado hace 2 días  | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-15.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Federico</p>
+                                        <p class="comment"> Les puedo asegurar que el producto funciona perfectamente. Solía ​​temer que la erección no vendría. Todo ha cambiado ahora)) ¡Gracias, Ariana!</p>
+                                        <p class="date">Publicado hace 3 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-16.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Peter</p>
+                                        <p class="comment">Conozco este producto, lo compré en Austria, realmente genial.</p>
+                                        <p class="date">Publicado hace 4 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-17.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Bruno</p>
+                                        <p class="comment">Compré <a target="_blank" href="buy">cápsulas de refuerzo</a> orgánicas y secretamente las tomé de mi esposa. ¡Después de 14 días mi esposa me preguntó qué me pasó! Nuestro sexo lleva mucho más tiempo, ¡la erección es muy fuerte! No le dije la verdad). He ordenado el producto con un descuento en el sitio web oficial, entregado muy rápidamente. Así que paciencia gente !!!))</p>
+                                        <p class="date">Publicado hace 4 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-20.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Fritz</p>
+                                        <p class="comment">Pedí el producto con un descuento, entregado rápidamente y sin problemas.</p>
+                                        <p class="date">Publicado hace 4 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-21.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Luigi</p>
+                                        <p class="comment">Espero que todos obtengan los mismos resultados que yo, puedo tener relaciones sexuales durante horas, todo funciona bien. Gracias, Ariana!</p>
+                                        <p class="date">Publicado hace 5 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-19.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Julia</p>
+                                        <p class="comment">Conozco estas cápsulas ... Mi esposo las tomó por un tiempo, a veces nos amamos 2-3 veces al día.</p>
+                                        <p class="date">Publicado hace 6 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-22.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Boris</p>
+                                        <p class="comment">El producto es fantástico y, sobre todo, el efecto es casi instantáneo. El primer paquete ya ha terminado, el segundo paquete está abierto.</p>
+                                        <p class="date">Publicado hace 7 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-23.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Alf</p>
+                                        <p class="comment">Yo quería probarlo. Obtuve el producto y en unas semanas fui con mi novia. Tal vez no lo creo, pero tuvimos 2 horas de sexo sin parar, lo que desafortunadamente no sucedió antes.</p>
+                                        <p class="date">Publicado hace 7 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-24.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Martin</p>
+                                        <p class="comment">¿Dónde puedo pedirlo, no lo entiendo?</p>
+                                        <p class="date">Publicado hace 8 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="comm-table">
+                                    <div class="col-avatar"><img src="av-27.jpg" alt="" class="img-circle"></div>
+                                    <div class="col-comm-text">
+                                        <p class="nickname">Sonya</p>
+                                        <p class="comment">Ahora se venden muchos productos falsos, solo disponibles en el sitio web oficial de <a target="_blank" href="buy">Biobooster</a>.</p>
+                                        <p class="date">Publicado hace 8 días | <a target="_blank" href="buy" class="bluesky">Deja un comentario</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                        <!--end comments-->
+                        <div class="otros-commentarios">
+                            <div class="col-md-12 text-center"><a target="_blank" href="buy">Otros comentarios</a></div>
+                        </div>
+
+
+                        <div class="row related">
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <img src="img11.jpg" alt="" class="img-responsive">
+                                <a target="_blank" href="buy">Recomendaciones para mejorar la potencia</a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <img src="img12.jpg" alt="" class="img-responsive">
+                                <a target="_blank" href="buy">Cómo hacer el sexo anal bien</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--main article-->
+
+
+                </div><!-- end 2 columns-->
+            </div>
+        </main>
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="offset-md-2 col-md-8 offset-sm-0 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-6 col-5"><img src="logo2.png" alt="" class="img-responsive"></div>
+                            <div class="col-md-5 offset-md-2 col-sm-6 offset-sm-0 col-7 socialicons text-right">
+                                <a target="_blank" href="buy"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                                <a target="_blank" href="buy"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a target="_blank" href="buy"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                <a target="_blank" href="buy"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a target="_blank" href="buy"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>© 2011 - 2018 | <a target="_blank" href="buy">Pie de imprenta </a> | <a target="_blank" href="buy">Contacto</a></p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+
+
+</body>
+</html>
